@@ -21,21 +21,21 @@ public class UserController {
 	
 	
 	@CrossOrigin(origins = "http://localhost:3000")
-	@PostMapping("/register")
+	@PostMapping("/register1")
 	public Response registerUser(@RequestBody UserInfo userInfo) {
 		
 		return userService.register(userInfo);
 	}
 	
 	@CrossOrigin(origins = "http://localhost:3000")
-	@PostMapping("/login")
+	@PostMapping("/login1")
 	public UserInfo loginUser(@RequestBody UserInfo userInfo) {
 		
 		return userService.login(userInfo);
 	}
 	
 	@CrossOrigin(origins = "http://localhost:3000")
-	@GetMapping("/login")
+	@GetMapping("/login1")
 	public List<UserInfo> loginUser() {
 		
 		return userService.loginCred();
